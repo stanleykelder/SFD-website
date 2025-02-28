@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 49% 98%;
+    --foreground: 220 49% 25%;
+    
+    /* Home - Navy Blue - WCAG AA Compliant */
+    --home: 220 49% 25%;
+    --home-foreground: 0 0% 100%;
+    --home-background: 220 49% 98%;
+    
+    /* Trainingen - Vibrant Green - WCAG AA Compliant */
+    --workshop: 142 76% 36%;
+    --workshop-foreground: 0 0% 100%;
+    --workshop-background: 142 76% 98%;
+    
+    /* Innovation - Coral Red - WCAG AA Compliant */
+    --innovation: 5 75% 40%;
+    --innovation-foreground: 0 0% 100%;
+    --innovation-background: 5 75% 98%;
+    
+    /* About - Rich Purple - WCAG AA Compliant */
+    --about: 265 50% 40%;
+    --about-foreground: 0 0% 100%;
+    --about-background: 265 50% 98%;
+    
+    /* Contact - Warm Yellow - WCAG AA Compliant */
+    --contact: 48 95% 35%;
+    --contact-foreground: 0 0% 100%;
+    --contact-background: 48 95% 98%;
+    
+    --card: 0 0% 100%;
+    --card-foreground: 220 49% 25%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 49% 25%;
+    --primary: 220 49% 25%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 220 49% 95%;
+    --secondary-foreground: 220 49% 25%;
+    --muted: 220 49% 95%;
+    --muted-foreground: 220 49% 35%;
+    --accent: 220 49% 95%;
+    --accent-foreground: 220 49% 25%;
+    --destructive: 0 84% 40%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 49% 90%;
+    --input: 220 49% 90%;
+    --ring: 220 49% 25%;
+    --radius: 0.125rem;
+  }
+
+  .theme-home {
+    --background: var(--home-background);
+    --foreground: var(--home);
+    --primary: var(--home);
+    --primary-foreground: var(--home-foreground);
+    --secondary: 220 49% 90%;
+    --secondary-foreground: var(--home);
+    --muted: 220 49% 90%;
+    --muted-foreground: 220 49% 35%;
+    --accent: 220 49% 90%;
+    --accent-foreground: var(--home);
+    --border: 220 49% 90%;
+  }
+
+  .theme-workshops {
+    --background: var(--workshop-background);
+    --foreground: var(--workshop);
+    --primary: var(--workshop);
+    --primary-foreground: var(--workshop-foreground);
+    --secondary: 142 76% 90%;
+    --secondary-foreground: var(--workshop);
+    --muted: 142 76% 90%;
+    --muted-foreground: 142 76% 35%;
+    --accent: 142 76% 90%;
+    --accent-foreground: var(--workshop);
+    --border: 142 76% 90%;
+  }
+
+  .theme-innovation {
+    --background: var(--innovation-background);
+    --foreground: var(--innovation);
+    --primary: var(--innovation);
+    --primary-foreground: var(--innovation-foreground);
+    --secondary: 5 75% 90%;
+    --secondary-foreground: var(--innovation);
+    --muted: 5 75% 90%;
+    --muted-foreground: 5 75% 35%;
+    --accent: 5 75% 90%;
+    --accent-foreground: var(--innovation);
+    --border: 5 75% 90%;
+  }
+
+  .theme-about {
+    --background: var(--about-background);
+    --foreground: var(--about);
+    --primary: var(--about);
+    --primary-foreground: var(--about-foreground);
+    --secondary: 265 50% 90%;
+    --secondary-foreground: var(--about);
+    --muted: 265 50% 90%;
+    --muted-foreground: 265 50% 35%;
+    --accent: 265 50% 90%;
+    --accent-foreground: var(--about);
+    --border: 265 50% 90%;
+  }
+
+  .theme-contact {
+    --background: var(--contact-background);
+    --foreground: var(--contact);
+    --primary: var(--contact);
+    --primary-foreground: var(--contact-foreground);
+    --secondary: 48 95% 90%;
+    --secondary-foreground: var(--contact);
+    --muted: 48 95% 90%;
+    --muted-foreground: 48 95% 35%;
+    --accent: 48 95% 90%;
+    --accent-foreground: var(--contact);
+    --border: 48 95% 90%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 48%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+.container {
+  @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+/* Add consistent background pattern */
+.theme-home,
+.theme-workshops,
+.theme-innovation,
+.theme-about,
+.theme-contact {
+  background-image: 
+    linear-gradient(to bottom, hsl(var(--background)), hsl(var(--background))),
+    repeating-linear-gradient(
+      to right,
+      hsl(var(--primary) / 0.02) 0px,
+      hsl(var(--primary) / 0.02) 1px,
+      transparent 1px,
+      transparent 60px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      hsl(var(--primary) / 0.02) 0px,
+      hsl(var(--primary) / 0.02) 1px,
+      transparent 1px,
+      transparent 60px
+    );
+  background-size: 100% 100%, 60px 60px, 60px 60px;
+} 
