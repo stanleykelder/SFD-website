@@ -31,7 +31,10 @@ export function SiteHeader() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-base font-medium text-primary relative group"
+                className={cn(
+                  'text-base font-medium transition-all duration-300 hover:text-primary relative group',
+                  pathname === item.href ? 'text-primary' : 'text-primary'
+                )}
               >
                 {item.name}
                 <span className={cn(
@@ -69,7 +72,10 @@ export function SiteHeader() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className="block py-2 text-base font-medium text-primary relative group"
+                  className={cn(
+                    'block py-2 text-base font-medium transition-colors relative group',
+                    pathname === item.href ? 'text-primary' : 'text-primary hover:text-primary'
+                  )}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}

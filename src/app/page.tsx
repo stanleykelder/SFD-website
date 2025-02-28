@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { AnimatedSection } from '@/components/ui/animated-section'
+import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Stanley Innovation - Innovatie die ertoe doet',
@@ -47,12 +48,11 @@ export default function HomePage() {
                   Focus op gebruikersgericht denken en een kort-cyclische aanpak om zo te creëren wat er echt toe doet.
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
-                  <Link
-                    href="/contact"
-                    className="inline-flex items-center justify-center bg-background text-primary border-2 border-primary/30 px-8 h-12 text-base font-semibold transition-all duration-300 hover:border-primary hover:-translate-y-1 transform-gpu"
-                  >
-                    Neem contact op
-                  </Link>
+                  <Button asChild>
+                    <Link href="/contact">
+                      Neem contact op
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { Button } from '@/components/ui/button'
 
 export function ContactForm() {
   const [formData, setFormData] = useState({
@@ -95,12 +96,9 @@ export function ContactForm() {
       </div>
 
       <div>
-        <button
-          type="submit"
-          className="rounded-md bg-primary px-4 py-2.5 text-center text-sm font-semibold text-white shadow-sm hover:bg-primary/90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary"
-        >
+        <Button type="submit">
           Versturen
-        </button>
+        </Button>
       </div>
     </form>
   )
