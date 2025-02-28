@@ -3,8 +3,17 @@
 import { usePathname } from 'next/navigation'
 import { useEffect } from 'react'
 
-function getThemeClass(pathname: string) {
-  // Ensure we're using normalized paths
+type ThemeClass = 'theme-home' | 'theme-innovation' | 'theme-workshops' | 'theme-about' | 'theme-contact'
+
+const THEME_CLASSES: ThemeClass[] = [
+  'theme-home',
+  'theme-innovation',
+  'theme-workshops',
+  'theme-about',
+  'theme-contact'
+]
+
+function getThemeClass(pathname: string): ThemeClass {
   const normalizedPath = pathname.toLowerCase()
   
   if (normalizedPath === '/') return 'theme-home'
@@ -15,12 +24,22 @@ function getThemeClass(pathname: string) {
   return 'theme-home'
 }
 
-export function ThemeProvider({ children }: { children: React.ReactNode }) {
+interface ThemeProviderProps {
+  children: React.ReactNode
+}
+
+export function ThemeProvider({ children }: ThemeProviderProps) {
   const pathname = usePathname()
 
   useEffect(() => {
     const themeClass = getThemeClass(pathname)
-    document.documentElement.className = themeClass
+    const root = document.documentElement
+    
+    // Remove all theme classes
+    THEME_CLASSES.forEach(cls => root.classList.remove(cls))
+    
+    // Add new theme class
+    root.classList.add(themeClass)
   }, [pathname])
 
   return children
