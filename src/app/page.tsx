@@ -25,7 +25,7 @@ const services = [
   {
     title: 'Over Stanley',
     description: 'Leer meer over mijn aanpak en ervaring in het begeleiden van innovatie.',
-    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1974&auto=format&fit=crop',
+    image: '/images/stanley.jpg',
     href: '/over-stanley'
   }
 ]
@@ -64,8 +64,8 @@ export default function HomePage() {
                 transition={{ duration: 0.7, delay: 0.2 }}
               >
                 <Image
-                  src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=2940&auto=format&fit=crop"
-                  alt="Innovation workshop"
+                  src="/images/stanley.jpg"
+                  alt="Stanley Innovation"
                   fill
                   className="object-cover"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

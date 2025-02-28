@@ -1,7 +1,8 @@
 {
   "/page": "app/page.js",
-  "/innovatiebegeleiding/page": "app/innovatiebegeleiding/page.js",
-  "/trainingen/page": "app/trainingen/page.js",
+  "/trainingen/agile-scrum/page": "app/trainingen/agile-scrum/page.js",
   "/contact/page": "app/contact/page.js",
+  "/trainingen/page": "app/trainingen/page.js",
+  "/innovatiebegeleiding/page": "app/innovatiebegeleiding/page.js",
   "/over-stanley/page": "app/over-stanley/page.js"
 }

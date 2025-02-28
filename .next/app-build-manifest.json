@@ -35,6 +35,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/over-stanley/page.js"
+    ],
+    "/trainingen/agile-scrum/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/trainingen/agile-scrum/page.js"
     ]
   }
 }
