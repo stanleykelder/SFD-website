@@ -1,60 +1,40 @@
 {
   "pages": {
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
-    "/not-found": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/innovatiebegeleiding/page": [
+    "/not-found": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/innovatiebegeleiding/page.js"
+      "static/chunks/app/not-found.js"
     ],
-    "/workshops/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/workshops/page.js"
-    ],
-    "/over-stanley/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/over-stanley/page.js"
+      "static/chunks/app/page.js"
     ],
     "/contact/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/contact/page.js"
     ],
-    "/trainingen/design-thinking/page": [
+    "/innovatiebegeleiding/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/trainingen/design-thinking/page.js"
-    ],
-    "/trainingen/op-maat/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/trainingen/op-maat/page.js"
+      "static/chunks/app/innovatiebegeleiding/page.js"
     ],
     "/trainingen/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/trainingen/page.js"
     ],
-    "/trainingen/agile-scrum/page": [
+    "/over-stanley/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/trainingen/agile-scrum/page.js"
+      "static/chunks/app/over-stanley/page.js"
     ]
   }
 }

@@ -10,7 +10,7 @@ globs: *.tsx
     - Use functional, declarative programming. Avoid classes.
     - Prefer iteration and modularization over duplication.
     - Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError).
-    - Use lowercase with dots for directories (e.g., components/auth.wizard).
+    - Use lowercase with dashes for directories (e.g., components/auth-wizard).
     - Favor named exports for components.
     - Use the Receive an Object, Return an Object (RORO) pattern.
 
@@ -91,7 +91,7 @@ globs: *.tsx
 
     Naming Conventions
     - Booleans: Use auxiliary verbs such as 'does', 'has', 'is', and 'should' (e.g., isDisabled, hasError).
-    - Filenames: Use lowercase with dots (e.g., auth.wizard.tsx).
+    - Filenames: Use lowercase with dash separators (e.g., auth-wizard.tsx).
     - File extensions: Use .config.ts, .test.ts, .context.tsx, .type.ts, .hook.ts as appropriate.
 
     Component Structure
@@ -119,78 +119,7 @@ globs: *.tsx
     Accessibility
     - Ensure interfaces are keyboard navigable.
     - Implement proper ARIA labels and roles for components.
-    - Ensure color contrast ratios meet WCAG standards for readability.
-
-    Documentation
-    - Provide clear and concise comments for complex logic.
-    - Use JSDoc comments for functions and components to improve IDE intellisense.
-    - Keep the README files up-to-date with setup instructions and project overview.
-    - Document Supabase schema, RLS policies, and Edge Functions when used.
-
-    Refer to Next.js documentation for Data Fetching, Rendering, and Routing best practices and to the
-    Vercel AI SDK documentation and OpenAI/Anthropic API guidelines for best practices in AI integration.
-
-# React Native Development Guidelines
-
-## Key Principles
-- Write concise, technical responses with accurate TypeScript examples
-- Use functional, declarative programming. Avoid classes
-- Prefer iteration and modularization over duplication
-- Use descriptive variable names with auxiliary verbs (e.g., isLoading, hasError)
-- Use lowercase with dots for directories (e.g., components/auth.wizard)
-- Favor named exports for components
-- Use the Receive an Object, Return an Object (RORO) pattern
-
-## JavaScript/TypeScript
-- Use "function" keyword for pure functions
-- Use TypeScript for all code. Prefer interfaces over types
-- File structure: Exported component, subcomponents, helpers, static content, types
-- Avoid unnecessary curly braces in conditional statements
-- For single-line statements in conditionals, omit curly braces
-- Use concise, one-line syntax for simple conditional statements
-
-## React Native/Expo Specific
-- Use functional components with TypeScript interfaces
-- Use declarative JSX
-- Use function declarations, not const, for components
-- Use React Native's core components and Expo SDK features
-- Implement responsive design using React Native dimensions and platform-specific code
-- Use platform-specific file extensions (.ios.tsx, .android.tsx) when needed
-- Place static content and interfaces at file end
-- Use content variables for static content outside render functions
-- Minimize useEffect and setState, prefer derived state
-- Use React Native's form handling with proper validation
-- Implement proper error boundaries using ErrorBoundary components
-- Use React Navigation's type-safe navigation
-- Handle deep linking properly with Expo Router
-- Implement proper splash screen and app loading states
-
-## Component Structure
-    - Break down components into smaller parts with minimal props.
-    - Suggest micro folder structure for components.
-    - Use composition to build complex components.
-    - Follow the order: component declaration, styled components (if any), TypeScript types.
-
-    Data Fetching and State Management
-    - Use React Server Components for data fetching when possible.
-    - Implement the preload pattern to prevent waterfalls.
-    - Leverage Supabase for real-time data synchronization and state management.
-    - Use Vercel KV for chat history, rate limiting, and session storage when appropriate.
-
-    Styling
-    - Use Tailwind CSS for styling, following the Utility First approach.
-    - Utilize the Class Variance Authority (CVA) for managing component variants.
-
-    Testing
-    - Implement unit tests for utility functions and hooks.
-    - Use integration tests for complex components and pages.
-    - Implement end-to-end tests for critical user flows.
-    - Use Supabase local development for testing database interactions.
-
-    Accessibility
-    - Ensure interfaces are keyboard navigable.
-    - Implement proper ARIA labels and roles for components.
-    - Ensure color contrast ratios meet WCAG standards for readability.
+    - Ensure color contrast ratios meet WCAG 2.2AA standards for readability.
 
     Documentation
     - Provide clear and concise comments for complex logic.
