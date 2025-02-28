@@ -1,50 +1,48 @@
-# Welcome to your Expo app 👋
+# Stanley Innovation Website
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+This is the official website for Stanley Innovation, built with Next.js 14, TypeScript, and Tailwind CSS.
 
-## Get started
+## Tech Stack
 
-1. Install dependencies
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Shadcn UI
+- **Animations**: Framer Motion
+- **Email Service**: Brevo
+- **Analytics**: Vercel Analytics
+- **Deployment**: Vercel
 
-   ```bash
-   npm install
-   ```
+## Development
 
-2. Start the app
-
-   ```bash
-    npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+To run the development server:
 
 ```bash
-npm run reset-project
+npm install
+npm run dev
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Learn more
+## Environment Variables
 
-To learn more about developing your project with Expo, look at the following resources:
+Create a `.env.local` file in the root directory with the following variables:
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+NEXT_PUBLIC_APP_URL=http://localhost:3000
+BREVO_API_KEY=your_brevo_api_key
+```
 
-## Join the community
+## Deployment
 
-Join our community of developers creating universal apps.
+The site is automatically deployed to Vercel through GitHub integration. Every push to the main branch will trigger a new deployment.
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+### Manual Deployment
+
+1. Install Vercel CLI: `npm i -g vercel`
+2. Run `vercel` to deploy
+3. Run `vercel --prod` to deploy to production
+
+## License
+
+Copyright © 2024 Stanley Innovation. All rights reserved.
