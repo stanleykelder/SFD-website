@@ -1,8 +1,12 @@
 {
-  "/page": "app/page.js",
-  "/trainingen/agile-scrum/page": "app/trainingen/agile-scrum/page.js",
+  "/_not-found": "app/_not-found.js",
+  "/over-stanley/page": "app/over-stanley/page.js",
   "/contact/page": "app/contact/page.js",
-  "/trainingen/page": "app/trainingen/page.js",
   "/innovatiebegeleiding/page": "app/innovatiebegeleiding/page.js",
-  "/over-stanley/page": "app/over-stanley/page.js"
+  "/trainingen/agile-scrum/page": "app/trainingen/agile-scrum/page.js",
+  "/page": "app/page.js",
+  "/trainingen/page": "app/trainingen/page.js",
+  "/workshops/page": "app/workshops/page.js",
+  "/trainingen/op-maat/page": "app/trainingen/op-maat/page.js",
+  "/trainingen/design-thinking/page": "app/trainingen/design-thinking/page.js"
 }

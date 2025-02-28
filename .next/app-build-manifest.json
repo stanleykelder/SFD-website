@@ -1,45 +1,114 @@
 {
   "pages": {
-    "/layout": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/layout.css",
-      "static/chunks/app/layout.js"
-    ],
     "/not-found": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/not-found.js"
+      "static/chunks/webpack-fbef9785a0e098f2.js",
+      "static/chunks/fd9d1056-b34e90ae3fbd908b.js",
+      "static/chunks/69-06948beaf48ba19f.js",
+      "static/chunks/main-app-0996bd4e4efe6527.js",
+      "static/chunks/150-2700f473d99da478.js",
+      "static/chunks/250-e0aae0f5abf64d15.js",
+      "static/chunks/app/not-found-3ee7d3ea6e2dba52.js"
     ],
-    "/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
-    ],
-    "/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/contact/page.js"
-    ],
-    "/innovatiebegeleiding/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/innovatiebegeleiding/page.js"
-    ],
-    "/trainingen/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/trainingen/page.js"
+    "/layout": [
+      "static/chunks/webpack-fbef9785a0e098f2.js",
+      "static/chunks/fd9d1056-b34e90ae3fbd908b.js",
+      "static/chunks/69-06948beaf48ba19f.js",
+      "static/chunks/main-app-0996bd4e4efe6527.js",
+      "static/chunks/150-2700f473d99da478.js",
+      "static/chunks/250-e0aae0f5abf64d15.js",
+      "static/css/c5c746a1b0c40173.css",
+      "static/chunks/app/layout-1ef2c0d61e3aa79e.js"
     ],
     "/over-stanley/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/over-stanley/page.js"
+      "static/chunks/webpack-fbef9785a0e098f2.js",
+      "static/chunks/fd9d1056-b34e90ae3fbd908b.js",
+      "static/chunks/69-06948beaf48ba19f.js",
+      "static/chunks/main-app-0996bd4e4efe6527.js",
+      "static/chunks/150-2700f473d99da478.js",
+      "static/chunks/250-e0aae0f5abf64d15.js",
+      "static/chunks/175-7b60718309c7b065.js",
+      "static/chunks/654-acf873c6aef6ca27.js",
+      "static/chunks/app/over-stanley/page-283d71bef768501f.js"
+    ],
+    "/contact/page": [
+      "static/chunks/webpack-fbef9785a0e098f2.js",
+      "static/chunks/fd9d1056-b34e90ae3fbd908b.js",
+      "static/chunks/69-06948beaf48ba19f.js",
+      "static/chunks/main-app-0996bd4e4efe6527.js",
+      "static/chunks/150-2700f473d99da478.js",
+      "static/chunks/175-7b60718309c7b065.js",
+      "static/chunks/app/contact/page-2bd4baa3faeac2f9.js"
+    ],
+    "/innovatiebegeleiding/page": [
+      "static/chunks/webpack-fbef9785a0e098f2.js",
+      "static/chunks/fd9d1056-b34e90ae3fbd908b.js",
+      "static/chunks/69-06948beaf48ba19f.js",
+      "static/chunks/main-app-0996bd4e4efe6527.js",
+      "static/chunks/150-2700f473d99da478.js",
+      "static/chunks/250-e0aae0f5abf64d15.js",
+      "static/chunks/175-7b60718309c7b065.js",
+      "static/chunks/app/innovatiebegeleiding/page-318c44c9096549bb.js"
     ],
     "/trainingen/agile-scrum/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/trainingen/agile-scrum/page.js"
+      "static/chunks/webpack-fbef9785a0e098f2.js",
+      "static/chunks/fd9d1056-b34e90ae3fbd908b.js",
+      "static/chunks/69-06948beaf48ba19f.js",
+      "static/chunks/main-app-0996bd4e4efe6527.js",
+      "static/chunks/150-2700f473d99da478.js",
+      "static/chunks/250-e0aae0f5abf64d15.js",
+      "static/chunks/175-7b60718309c7b065.js",
+      "static/chunks/app/trainingen/agile-scrum/page-d51f5f72ae0335de.js"
+    ],
+    "/page": [
+      "static/chunks/webpack-fbef9785a0e098f2.js",
+      "static/chunks/fd9d1056-b34e90ae3fbd908b.js",
+      "static/chunks/69-06948beaf48ba19f.js",
+      "static/chunks/main-app-0996bd4e4efe6527.js",
+      "static/chunks/150-2700f473d99da478.js",
+      "static/chunks/250-e0aae0f5abf64d15.js",
+      "static/chunks/175-7b60718309c7b065.js",
+      "static/chunks/654-acf873c6aef6ca27.js",
+      "static/chunks/app/page-bfbc6d2da43b2819.js"
+    ],
+    "/trainingen/page": [
+      "static/chunks/webpack-fbef9785a0e098f2.js",
+      "static/chunks/fd9d1056-b34e90ae3fbd908b.js",
+      "static/chunks/69-06948beaf48ba19f.js",
+      "static/chunks/main-app-0996bd4e4efe6527.js",
+      "static/chunks/150-2700f473d99da478.js",
+      "static/chunks/250-e0aae0f5abf64d15.js",
+      "static/chunks/175-7b60718309c7b065.js",
+      "static/chunks/654-acf873c6aef6ca27.js",
+      "static/chunks/app/trainingen/page-61c3f3f447f3e6a5.js"
+    ],
+    "/workshops/page": [
+      "static/chunks/webpack-fbef9785a0e098f2.js",
+      "static/chunks/fd9d1056-b34e90ae3fbd908b.js",
+      "static/chunks/69-06948beaf48ba19f.js",
+      "static/chunks/main-app-0996bd4e4efe6527.js",
+      "static/chunks/250-e0aae0f5abf64d15.js",
+      "static/chunks/175-7b60718309c7b065.js",
+      "static/chunks/app/workshops/page-d61a1f82f19f6479.js"
+    ],
+    "/trainingen/op-maat/page": [
+      "static/chunks/webpack-fbef9785a0e098f2.js",
+      "static/chunks/fd9d1056-b34e90ae3fbd908b.js",
+      "static/chunks/69-06948beaf48ba19f.js",
+      "static/chunks/main-app-0996bd4e4efe6527.js",
+      "static/chunks/150-2700f473d99da478.js",
+      "static/chunks/250-e0aae0f5abf64d15.js",
+      "static/chunks/175-7b60718309c7b065.js",
+      "static/chunks/app/trainingen/op-maat/page-e886eb06b97efba2.js"
+    ],
+    "/trainingen/design-thinking/page": [
+      "static/chunks/webpack-fbef9785a0e098f2.js",
+      "static/chunks/fd9d1056-b34e90ae3fbd908b.js",
+      "static/chunks/69-06948beaf48ba19f.js",
+      "static/chunks/main-app-0996bd4e4efe6527.js",
+      "static/chunks/150-2700f473d99da478.js",
+      "static/chunks/250-e0aae0f5abf64d15.js",
+      "static/chunks/175-7b60718309c7b065.js",
+      "static/chunks/app/trainingen/design-thinking/page-b48d073718939fde.js"
     ]
   }
 }
