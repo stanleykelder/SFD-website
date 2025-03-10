@@ -5,24 +5,24 @@ import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Innovatiebegeleiding - Stanley Innovation',
-  description: 'Professionele innovatiebegeleiding voor teams die willen groeien. Gebruikersgericht, kort-cyclisch en op maat gemaakt voor jouw organisatie.',
+  description: 'Professionele innovatiebegeleiding voor teams die willen groeien. Gebruikersgericht, kort-cyclisch en Jouw team is uniek voor jouw organisatie.',
 }
 
 const benefits = [
   {
     title: 'Onderdeel van jouw team',
-    description: 'Ik werk niet vanaf de zijlijn, maar word tijdelijk onderdeel van jouw team. Zo kunnen we samen écht het verschil maken.',
+    description: 'Ik werk niet vanaf de zijlijn, maar word tijdelijk onderdeel van jouw team. Zo zetten we samen snel concrete stappen.',
   },
   {
     title: 'Learning while doing',
-    description: 'Geen theoretische sessies, maar direct aan de slag met echte uitdagingen. Zo leert het team door te doen.',
+    description: 'We gaan direct aan de slag met jullie uitdagingen. Zo leer je door te doen.',
   },
   {
-    title: 'Op maat gemaakt',
-    description: 'Ieder team en iedere uitdaging is uniek. De begeleiding wordt daarom volledig afgestemd op jullie situatie en doelen.',
+    title: 'Jouw team is uniek',
+    description: 'Ieder team en iedere uitdaging is uniek. We stemmen de begeleiding daarom volledig samen af op jullie situatie en doelen.',
   },
   {
-    title: 'Bewezen methodes',
+    title: 'Design Thinking en Agile werken',
     description: 'Combinatie van Design Thinking en Agile technieken voor optimale resultaten en gebruikersgerichte innovatie.',
   }
 ]
