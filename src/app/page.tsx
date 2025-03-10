@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button'
 
 export const metadata: Metadata = {
   title: 'Stanley Innovation - Innovatie die ertoe doet',
-  description: 'Focus op gebruikersgericht denken en een kort-cyclische aanpak om zo te creëren wat er echt toe doet.',
+  description: 'Focus op gebruikersgericht denken en een kort-cyclische aanpak.',
 }
 
 const services = [
@@ -42,10 +42,10 @@ export default function HomePage() {
               <div className="absolute -top-4 -left-8 w-72 h-72 bg-primary/5 rounded-full blur-3xl" />
               <div className="relative">
                 <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-6xl xl:text-7xl">
-                  De wereld een beetje beter maken door te begrijpen wat er echt nodig is
+                  Innoveren om de wereld beter te maken
                 </h1>
                 <p className="mt-8 text-xl text-gray-600 leading-relaxed">
-                  Focus op gebruikersgericht denken en een kort-cyclische aanpak om zo te creëren wat er echt toe doet.
+                  Focus op gebruikersgericht denken en een kort-cyclische aanpak.
                 </p>
                 <div className="mt-10 flex flex-col sm:flex-row gap-4">
                   <Button asChild>
