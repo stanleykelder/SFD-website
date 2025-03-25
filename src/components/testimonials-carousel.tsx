@@ -12,24 +12,24 @@ const testimonials = [
     quote: 'Wij wilden een manier ontwikkelen om klimaatadaptatie te monitoren, iets wat nog niet eerder zo uitgebreid was gedaan. Met de hulp van Stanley hebben we een fantastische oplossing ontwikkeld. Bovendien hebben we er veel plezier in gehad en zijn we als team dichter bij elkaar gekomen.',
     image: '/images/ellen-kelder.png'
   },
-  {
-    name: 'Jelmer de Lange',
-    role: 'Coördinator Scheepvaartinnovaties, Rijkswaterstaat',
-    quote: 'Als projectleider heb ik heel nauw samengewerkt met Stanley en hij wist mij altijd uit te dagen om ambitieuze doelen te stellen, maar tegelijkertijd kleine en simpele stappen te zetten. Zijn gedrevenheid en enthousiasme werken aanstekelijk.',
-    image: '/images/jelmer-delange.jpg'
-  },
+  // {
+  //   name: 'Jelmer de Lange',
+  //   role: 'Coördinator Scheepvaartinnovaties, Rijkswaterstaat',
+  //   quote: 'Als projectleider heb ik heel nauw samengewerkt met Stanley en hij wist mij altijd uit te dagen om ambitieuze doelen te stellen, maar tegelijkertijd kleine en simpele stappen te zetten. Zijn gedrevenheid en enthousiasme werken aanstekelijk.',
+  //   image: '/images/jelmer-delange.jpg'
+  // },
   // {
   //   name: 'Benno Bultink',
   //   role: 'Projectleider, Connected River/Rijkswaterstaat',
   //   quote: 'Stanley kan zowel in de dagelijkse werkzaamheden het team enthousiasmeren en scherp houden, als uitzoomen op projectniveau en adviseren op procesinrichting. Zijn pragmatisme zorgt ervoor dat innovatie niet alleen op post-its bestaat, maar daadwerkelijk in de praktijk wordt toegepast.',
   //   image: '/images/benno-bultink.png'
   // },
-  // {
-  //   name: 'Berry Gersonius',
-  //   role: 'Resiliense',
-  //   quote: 'Stanley heeft duidelijk veel ervaring met Design Thinking en Agile werken. Als innovatieteam voor groen en water bij gemeente Dordrecht vond ik het belangrijk dat wij ook leerden werken met deze methodieken. Stanley heeft ons hier fantastisch in geholpen door training te geven, workshops te faciliteren en de juiste tools voor ons op te zetten.',
-  //   image: '/images/berry-gersonius.jpeg'
-  // },
+  {
+    name: 'Berry Gersonius',
+    role: 'Resiliense',
+    quote: 'Stanley heeft duidelijk veel ervaring met Design Thinking en Agile werken. Als innovatieteam voor groen en water bij gemeente Dordrecht vond ik het belangrijk dat wij ook leerden werken met deze methodieken. Stanley heeft ons hier fantastisch in geholpen door training te geven, workshops te faciliteren en de juiste tools voor ons op te zetten.',
+    image: '/images/berry-gersonius.jpeg'
+  },
 ]
 
 export function TestimonialsCarousel() {
