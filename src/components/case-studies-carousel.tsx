@@ -12,19 +12,19 @@ const caseStudies = [
     description: 'De gemeente Dordrecht was op zoek naar een oplossing om klimaatadaptieve maatregelen te monitoren. In een halfjaar heb ik de gemeente begeleid bij het doorlopen van het Design Thinking proces. Het dashboard dat we ontwikkelden was zo\'n succes dat het ministerie dit nu landelijk uitrolt. "Het proces was een ongekend succes: naast een geweldige oplossing heeft het ook ons teams dichter bij eklaar gebracht".',
     image: '/images/gemeentedordrecht.png',
   },
-  {
-    title: 'Rijkswaterstaat',
-    subtitle: 'Samenwerken in een complex ecosysteem',
-    description: 'Het IJ in Amsterdam kent veel verschillende stakeholders en gebruikers op en om het water. Rijkswaterstaat nam de lead om sammen met onder andere Waternet, havenbedrijf Amsterdam en Gemeente Amsterdam op een innovatieve manier samen te werken. Zo blijft het IJ leuk voor de recreant, veilig voor de beroepsvaarders en duurzaam voor de toekomst. "Door de begeleding van Stanley Innovation kunnen we met onze beperkte tijd toch heel effectief aan oplossingen werken".',
-    image: '/images/rijkswaterstaat.png',
-  },
-  {
-    title: 'Connected River',
-    subtitle: 'Nudgen van vaargedrag',
-    description: 'Veel recreanten varen zonder vaarbewijs en kennen de betekenis van de borden niet goed. Als onderdeel van het Connected River programma ontwikkelen en testen we in korte iteraties meerdere oplossingen. "De app die we maakten leek in eerste instante een succes, maar de noodzaak om deze te downloaden ontbrak. Met roze borden met makkelijke boodschappen hebben we kunnen aantonen dat meer gebruikers de juiste route kiezen. Door de begeleiding van Stanley Innovation hebben we heel snel resultaten opgehaald en niet onnodig veel tijd gestopt in een app die niet nodig was".',
-    image2: '/images/interreg.svg',
-    image: '/images/connectedriver.png',
-  }
+  // {
+  //   title: 'Rijkswaterstaat',
+  //   subtitle: 'Samenwerken in een complex ecosysteem',
+  //   description: 'Het IJ in Amsterdam kent veel verschillende stakeholders en gebruikers op en om het water. Rijkswaterstaat nam de lead om sammen met onder andere Waternet, havenbedrijf Amsterdam en Gemeente Amsterdam op een innovatieve manier samen te werken. Zo blijft het IJ leuk voor de recreant, veilig voor de beroepsvaarders en duurzaam voor de toekomst. "Door de begeleding van Stanley Innovation kunnen we met onze beperkte tijd toch heel effectief aan oplossingen werken".',
+  //   image: '/images/rijkswaterstaat.png',
+  // },
+  // {
+  //   title: 'Connected River',
+  //   subtitle: 'Nudgen van vaargedrag',
+  //   description: 'Veel recreanten varen zonder vaarbewijs en kennen de betekenis van de borden niet goed. Als onderdeel van het Connected River programma ontwikkelen en testen we in korte iteraties meerdere oplossingen. "De app die we maakten leek in eerste instante een succes, maar de noodzaak om deze te downloaden ontbrak. Met roze borden met makkelijke boodschappen hebben we kunnen aantonen dat meer gebruikers de juiste route kiezen. Door de begeleiding van Stanley Innovation hebben we heel snel resultaten opgehaald en niet onnodig veel tijd gestopt in een app die niet nodig was".',
+  //   image2: '/images/interreg.svg',
+  //   image: '/images/connectedriver.png',
+  // }
 ]
 
 export function CaseStudiesCarousel() {
