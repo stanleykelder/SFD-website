@@ -11,6 +11,7 @@ const caseStudies = [
     subtitle: 'Monitoren klimaatadaptieve maatregelen',
     description: 'De gemeente Dordrecht was op zoek naar een oplossing om klimaatadaptieve maatregelen te monitoren. In een halfjaar heb ik de gemeente begeleid bij het doorlopen van het Design Thinking proces. Het dashboard dat we ontwikkelden was zo\'n succes dat het ministerie dit nu landelijk uitrolt. "Het proces was een ongekend succes: naast een geweldige oplossing heeft het ook ons teams dichter bij eklaar gebracht".',
     image: '/images/gemeentedordrecht.png',
+    image2: '',
   },
   // {
   //   title: 'Rijkswaterstaat',
@@ -24,7 +25,7 @@ const caseStudies = [
   //   description: 'Veel recreanten varen zonder vaarbewijs en kennen de betekenis van de borden niet goed. Als onderdeel van het Connected River programma ontwikkelen en testen we in korte iteraties meerdere oplossingen. "De app die we maakten leek in eerste instante een succes, maar de noodzaak om deze te downloaden ontbrak. Met roze borden met makkelijke boodschappen hebben we kunnen aantonen dat meer gebruikers de juiste route kiezen. Door de begeleiding van Stanley Innovation hebben we heel snel resultaten opgehaald en niet onnodig veel tijd gestopt in een app die niet nodig was".',
   //   image2: '/images/interreg.svg',
   //   image: '/images/connectedriver.png',
-  // }
+  // },
 ]
 
 export function CaseStudiesCarousel() {
