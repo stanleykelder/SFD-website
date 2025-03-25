@@ -4,7 +4,7 @@ import { Button } from '../ui/button'
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-sm">
+    <header className="fixed top-0 left-0 right-0 z-50 backdrop-blur-sm">
       <div className="container mx-auto px-4">
         <div className="flex h-20 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">

@@ -7,7 +7,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t py-8 md:py-12 bg-primary text-primary-foreground">
       <div className="container">
-        <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
+        <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
           <div className="flex flex-col items-center gap-4 px-8 md:flex-row md:gap-8 md:px-0">
             <Link 
               href="/" 
@@ -22,12 +22,6 @@ export function SiteFooter() {
               INNOVATIEBEGELEIDING
             </Link>
             <Link 
-              href="/trainingen" 
-              className="text-sm text-primary-foreground/80 hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
-            >
-              TRAININGEN
-            </Link>
-            <Link 
               href="/over-stanley" 
               className="text-sm text-primary-foreground/80 hover:text-primary-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
             >
@@ -40,8 +34,16 @@ export function SiteFooter() {
               CONTACT
             </Link>
           </div>
-          <div className="text-center text-sm text-primary-foreground/80 md:text-right">
-            © {new Date().getFullYear()} Stanley Innovation. Alle rechten voorbehouden.
+          <div className="flex flex-col items-center gap-2 md:items-end">
+            <div className="text-sm text-primary-foreground/90 hover:text-primary-foreground">
+              <a href="mailto:stanley@savethecity.app" className="hover:underline">stanley@savethecity.app</a>
+            </div>
+            <div className="text-sm text-primary-foreground/90 hover:text-primary-foreground">
+              <a href="tel:+31620926980" className="hover:underline">+31 6 20 92 69 80</a>
+            </div>
+            <div className="text-sm text-primary-foreground/80 mt-2">
+              © {new Date().getFullYear()} Stanley Innovation. Alle rechten voorbehouden.
+            </div>
           </div>
         </div>
       </div>

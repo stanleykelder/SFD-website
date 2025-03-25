@@ -12,7 +12,6 @@ export function SiteHeader() {
   const navigation = [
     { name: 'HOME', href: '/' },
     { name: 'INNOVATIEBEGELEIDING', href: '/innovatiebegeleiding' },
-    { name: 'TRAININGEN', href: '/trainingen' },
     { name: 'OVER STANLEY', href: '/over-stanley' },
     { name: 'CONTACT', href: '/contact' },
   ]
@@ -48,16 +47,18 @@ export function SiteHeader() {
           {/* Mobile menu button */}
           <button
             type="button"
-            className="md:hidden -m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-primary"
+            className="md:hidden inline-flex items-center justify-center rounded-md p-3 text-primary touch-manipulation"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
+            aria-expanded={isMenuOpen}
+            aria-label="Toggle menu"
           >
             <span className="sr-only">Open main menu</span>
             {isMenuOpen ? (
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+              <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
               </svg>
             ) : (
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
+              <svg className="h-8 w-8" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
               </svg>
             )}

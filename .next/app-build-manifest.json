@@ -1,9 +1,9 @@
 {
   "pages": {
-    "/page": [
+    "/innovatiebegeleiding/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/page.js"
+      "static/chunks/app/innovatiebegeleiding/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -16,25 +16,20 @@
       "static/chunks/main-app.js",
       "static/chunks/app/not-found.js"
     ],
-    "/innovatiebegeleiding/page": [
+    "/contact/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/innovatiebegeleiding/page.js"
+      "static/chunks/app/contact/page.js"
     ],
-    "/trainingen/page": [
+    "/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/trainingen/page.js"
+      "static/chunks/app/page.js"
     ],
     "/over-stanley/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/over-stanley/page.js"
-    ],
-    "/contact/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/contact/page.js"
     ]
   }
 }

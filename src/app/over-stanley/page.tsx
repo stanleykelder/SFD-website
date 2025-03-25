@@ -3,11 +3,69 @@ import { AnimatedSection } from '@/components/ui/animated-section'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import { Title } from '@/components/ui/title'
+import { ShadowedImage } from '@/components/ui/shadowed-image'
+import { generateMetadata, defaultViewport } from '@/config/metadata'
 
-export const metadata: Metadata = {
-  title: 'Over Stanley - Stanley Innovation',
+export const metadata: Metadata = generateMetadata({
+  title: 'Over Stanley',
   description: 'Maak kennis met Stanley: innovatiecoach met een passie voor het creëren van betekenisvolle impact door mensgerichte innovatie.',
-}
+  keywords: ['innovatiecoach', 'innovatie', 'Stanley', 'over Stanley', 'innovatie expert'],
+  images: [
+    {
+      url: '/images/stanley-presenteert.png',
+      width: 800,
+      height: 1067,
+      alt: 'Stanley presenteert',
+    },
+  ],
+  canonical: 'https://stanleyinnovation.nl/over-stanley',
+})
+
+// Add viewport export
+export const viewport = defaultViewport
+
+// Content configuration for easier editing
+const content = {
+  hero: {
+    image: {
+      src: '/images/stanley-presenteert2.png',
+      alt: 'Stanley',
+      width: 600,
+      height: 800,
+    },
+    title: 'Dit is Stanley',
+    introduction: 'Stanley is geboren en opgegroeid op Curacao, waar hij van jongs af aan genoot van alle verschillende culturele invloeden. Na de middelbare school verhuisde Stanley naar Nederland, waar hij in Amsterdam studeerde. Zijn passie voor andere culturen bracht hem tijdens zijn studie in Costa Rica, Madrid en Helsinki. Het omarmen van de diversiteit en het inleven en begrijpen van anderen heeft hij meegenomen naar zijn gebruikersgerichte aanpak van innovatie.'
+  },
+  
+  sections: [
+    {
+      title: 'Wat innovatie voor mij betekent',
+      paragraphs: [
+        'Innovatie gaat over mensen. Mijn grote doel is om zo veel mogelijk mensen te helpen. Dat kan op veel verschillende manieren, maar om echt te kunnen helpen moet je eerst goed begrijpen wat er nodis is. Dit vereist dat je luistert naar je gebruikers en jezelf durft uit te dagen vooroordelen opzij te zetten en buiten je eigen kaders te denken.',
+        'We leven in een wereld waar keuzes veelal worden gemaakt op basis van winstmaximalisatie. Grote multinationals die onder het mom van innovatie op zoek zijn naar nog meer geld. Vaak genoeg gaat dit juist te koste van de mensen die het hardst hulp nodig hebben. ',
+      ]
+    },
+    {
+      title: 'Mijn pad tot innovatiecoach',
+      paragraphs: [
+        'Naast mijn passie voor mensen en culturen heb ik ook mijn hele leven al een fascinatie voor nieuwe ontwikkelingen en ondernemerschap. In mijn tussenjaar organiseerde ik \’Wie is de Mol\’-feestjes via Marktplaats. Vervolgens koos ik voor de interdisciplinaire studie Bèta-gamma, met de richting Natuurkunde. Hierin vond ik vooral alle ontwikkelingen rondom quantum computers heel interessant. Als Master mocht ik deelnemen aan het Europese programma Computer Science and Innovation, met de specialisatie Human-Computer Interaction and Design. Hier leerde ik voor het eerst concreet mijn kennis en passie toepassen in innovatie.',
+        'Tijdens mijn studie richtte ik savethecity.app op met vrienden. Niet alleen konden we zo een hele leuke app maken voor onder andere Gemeente Dordrecht en gemeente Hardenberg, ik kon meteen alles wat ik leerde over innovatie op mijn studie in de praktijk brengen. Na mijn studie ben ik bij KPN gaan werken als Scrum Master. Als Scrum Master in zo’n grote organisatie leerde ik snel hoe belangrijk het is om goed samen te blijven werken en te blijven luisteren naar alle belangen die spelen. Om nog meer maatschappelijke impact te kunnen maken met innoveren ben ik hierna voor mezelf begonnen met Stanley Innovation. Als innovatiebegeleider of innovatiecoach help ik teams om een efficiënte manier van werken op te zetten, gebruikers-gericht en kort-cyclisch. Dit doe ik onder andere door het geven van trainingen en workshops, het faciliteren van brainstormsessies en met het inrichten van een Kanban-bord en standups.'
+      ]
+    },
+    {
+      title: 'Mijn leven buiten innovatie',
+      paragraphs: [
+        'Naast de innovatie ben ik graag buiten. Ik hou ervan om te (hard)lopen door het bos en het bos te zien veranderen door de seizoenen heen. Ik ben ook dol op sneeuw en hoop ooit nog een winter door te brengen op een husky-farm in Lapland. Daarnaast houd ik van eten en van koken. Als ik zelf kook doe ik dat het liefst met verse ingrediënten uit mijn eigen tuin. Als ik uit eten ga dan probeer ik graag nieuwe dingen uit, ook dat is een goede manier van een andere cultuur ontdekken. Al eet ik ook met veel liefde heel vaak Indiaas!'
+      ]
+    }
+  ],
+  
+  ctaButton: {
+    text: 'Neem contact op',
+    link: '/contact'
+  }
+};
 
 export default function AboutPage() {
   return (
@@ -19,63 +77,55 @@ export default function AboutPage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-              <div className="relative aspect-[3/4] w-full overflow-hidden rounded-2xl">
-                <Image
-                  src="/images/stanley.jpg"
-                  alt="Stanley"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 50vw"
+            {/* Hero Section */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-16 items-start">
+              <div className="flex justify-center col-span-1">
+                <ShadowedImage
+                  src={content.hero.image.src}
+                  alt={content.hero.image.alt}
+                  width={content.hero.image.width}
+                  height={content.hero.image.height}
                   priority
+                  size="small"
+                  containerClassName="w-full max-w-[240px] md:max-w-full"
                 />
               </div>
               
-              <div>
-                <h1 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
-                  Hey, ik ben Stanley! 👋
-                </h1>
+              <div className="col-span-1 md:col-span-3">
+                <Title as="h1" className="mb-6">
+                  {content.hero.title}
+                </Title>
                 
-                <div className="prose prose-lg">
-                  <p className="text-lg text-gray-600 mb-6">
-                    Als innovatiecoach help ik organisaties om écht impact te maken. Niet door fancy technologie of hippe buzzwords, maar door mensen centraal te stellen. Want daar geloof ik in: de beste innovaties ontstaan wanneer we echt begrijpen wat mensen nodig hebben.
+                <div className="prose prose-lg max-w-none">
+                  <p className="text-gray-600 mb-6 mt-6">
+                    {content.hero.introduction}
                   </p>
                 </div>
               </div>
             </div>
 
+            {/* Content Sections */}
             <div className="mt-12 space-y-8">
-              <div className="prose prose-lg max-w-none">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Mijn kijk op innovatie</h2>
-                <p className="text-gray-600">
-                  Te vaak zie ik dat innovatie wordt verward met digitalisering of efficiency. Maar weet je wat écht werkt? De werkvloer op gaan. Praten met mensen. Begrijpen waar ze tegenaan lopen. En dan samen - ja, écht samen - oplossingen ontwikkelen die het verschil maken.
-                </p>
-                <p className="text-gray-600 mt-4">
-                  Mijn aanpak? Die is simpel maar effectief. Ik breng de mensen die het probleem ervaren (de échte experts) samen met mensen die weten hoe je oplossingen bouwt. Deze combinatie van praktijkervaring en innovatie-expertise leidt tot resultaten waar iedereen blij van wordt.
-                </p>
-              </div>
+              {content.sections.map((section, index) => (
+                <div key={index} className="prose prose-lg max-w-none">
+                  <Title as="h2" className="mb-6">
+                    {section.title}
+                  </Title>
+                  {section.paragraphs.map((paragraph, pIndex) => (
+                    <p 
+                      key={pIndex} 
+                      className={`text-gray-600 ${pIndex === 0 ? 'mt-6' : 'mt-4'}`}
+                      dangerouslySetInnerHTML={{ __html: paragraph }}
+                    />
+                  ))}
+                </div>
+              ))}
 
-              <div className="prose prose-lg max-w-none">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">Ervaring die ertoe doet</h2>
-                <p className="text-gray-600">
-                  Mijn reis begon op Curaçao, waar ik leerde hoe belangrijk het is om verschillende perspectieven te begrijpen. Via studies in Madrid en Helsinki (Master in Computer Science and Innovation) en werk als Scrum Master bij KPN heb ik geleerd hoe je innovatie praktisch en effectief maakt.
-                </p>
-                <p className="text-gray-600 mt-4">
-                  Nu, als zelfstandig innovatiecoach, help ik organisaties zoals Rijkswaterstaat en Gemeente Dordrecht om hun innovatie-uitdagingen aan te pakken. Niet met dikke rapporten, maar met concrete actie en meetbare resultaten.
-                </p>
-              </div>
-
-              <div className="prose prose-lg max-w-none">
-                <h2 className="text-2xl font-bold text-gray-900 mb-4">En als ik niet aan het innoveren ben...</h2>
-                <p className="text-gray-600">
-                  Vind je me in de natuur, in de keuken (koken is ook een vorm van innovatie, toch?), of op ontdekkingsreis in nieuwe culturen. Die nieuwsgierigheid en creativiteit neem ik ook mee in mijn werk. Oh, en samen met vrienden heb ik <a href="https://savethecity.app" target="_blank" rel="noopener noreferrer" className="text-primary hover:text-primary/80">savethecity.app</a> ontwikkeld - want innovatie is het leukst als je het samen doet!
-                </p>
-              </div>
-
+              {/* CTA Button */}
               <div className="mt-12 flex justify-center">
                 <Button asChild>
-                  <Link href="/contact">
-                    Zullen we kennismaken?
+                  <Link href={content.ctaButton.link}>
+                    {content.ctaButton.text}
                   </Link>
                 </Button>
               </div>
