@@ -12,12 +12,12 @@ const testimonials = [
     quote: 'Wij wilden een manier ontwikkelen om klimaatadaptatie te monitoren, iets wat nog niet eerder zo uitgebreid was gedaan. Met de hulp van Stanley hebben we een fantastische oplossing ontwikkeld. Bovendien hebben we er veel plezier in gehad en zijn we als team dichter bij elkaar gekomen.',
     image: '/images/ellen-kelder.png'
   },
-  // {
-  //   name: 'Jelmer de Lange',
-  //   role: 'Coördinator Scheepvaartinnovaties, Rijkswaterstaat',
-  //   quote: 'Als projectleider heb ik heel nauw samengewerkt met Stanley en hij wist mij altijd uit te dagen om ambitieuze doelen te stellen, maar tegelijkertijd kleine en simpele stappen te zetten. Zijn gedrevenheid en enthousiasme werken aanstekelijk.',
-  //   image: '/images/jelmer-delange.jpg'
-  // },
+  {
+    name: 'Jelmer de Lange',
+    role: 'Coördinator Scheepvaartinnovaties, Rijkswaterstaat',
+    quote: 'Als projectleider heb ik heel nauw samengewerkt met Stanley en hij wist mij altijd uit te dagen om ambitieuze doelen te stellen, maar tegelijkertijd kleine en simpele stappen te zetten. Zijn gedrevenheid en enthousiasme werken aanstekelijk.',
+    image: '/images/jelmer-delange.jpg'
+  },
   // {
   //   name: 'Benno Bultink',
   //   role: 'Projectleider, Connected River/Rijkswaterstaat',
