@@ -98,12 +98,12 @@ export function CaseStudiesCarousel() {
 
       <div 
         id="case-studies-container"
-        className="flex gap-12 overflow-x-auto snap-x snap-mandatory case-studies-scroll scroll-smooth pb-6"
+        className="flex gap-12 overflow-x-auto snap-x snap-mandatory case-studies-scroll scroll-smooth pb-6 pr-16"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {caseStudies.map((study, index) => (
           <div key={index} className="case-study-card relative min-w-[calc(100%-3rem)] snap-center">
-            <ShadowedCard containerClassName="mx-0" contentClassName="p-8">
+            <ShadowedCard contentClassName="p-8">
               <div className="flex flex-col md:flex-row gap-8">
                 <div className="relative w-full md:w-1/3 aspect-[4/3]">
                   {study.image2 ? (

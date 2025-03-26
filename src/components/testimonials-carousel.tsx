@@ -14,7 +14,7 @@ const testimonials = [
   },
   {
     name: 'Jelmer de Lange',
-    role: 'Coördinator Scheepvaartinnovaties, Rijkswaterstaat',
+    role: 'Regisseur Innovatie Scheepvaart, Rijkswaterstaat',
     quote: 'Als projectleider heb ik heel nauw samengewerkt met Stanley en hij wist mij altijd uit te dagen om ambitieuze doelen te stellen, maar tegelijkertijd kleine en simpele stappen te zetten. Zijn gedrevenheid en enthousiasme werken aanstekelijk.',
     image: '/images/jelmer-delange.jpg'
   },
@@ -174,7 +174,7 @@ export function TestimonialsCarousel() {
 
       <div 
         id="testimonials-container"
-        className="flex gap-12 overflow-x-auto snap-x snap-mandatory testimonials-scroll scroll-smooth"
+        className="flex gap-12 overflow-x-auto snap-x snap-mandatory testimonials-scroll scroll-smooth pr-16"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
         {testimonials.map((testimonial, index) => (
@@ -184,7 +184,7 @@ export function TestimonialsCarousel() {
             ref={el => { cardsRef.current[index] = el }}
             style={{ height: maxCardHeight > 0 ? `${maxCardHeight}px` : 'auto' }}
           >
-            <ShadowedCard containerClassName="mx-0">
+            <ShadowedCard>
               <AnimatedSection
                 className="flex flex-col h-full"
                 initial={{ opacity: 0, y: 20 }}
