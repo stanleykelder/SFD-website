@@ -33,197 +33,173 @@ const testimonials = [
 ]
 
 export function TestimonialsCarousel() {
-  const cardsRef = useRef<(HTMLDivElement | null)[]>([])
-  const [maxCardHeight, setMaxCardHeight] = useState(0)
-  const resizeTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const containerRef = useRef<HTMLDivElement>(null)
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [visibleCount, setVisibleCount] = useState(1)
   
-  // Calculate maximum content height
+  // Handle responsive layout
   useEffect(() => {
-    const updateMaxHeight = () => {
-      // Reset refs array to match current number of testimonials
-      cardsRef.current = cardsRef.current.slice(0, testimonials.length)
-      
-      // Clear any existing timeout to prevent multiple calls
-      if (resizeTimeoutRef.current) {
-        clearTimeout(resizeTimeoutRef.current)
-      }
-      
-      // Delay calculation to ensure DOM is fully rendered after resize
-      resizeTimeoutRef.current = setTimeout(() => {
-        const heights = cardsRef.current
-          .filter(Boolean)
-          .map(card => card?.scrollHeight || 0)
-        
-        const maxHeight = Math.max(...heights, 0)
-        if (maxHeight > 0 && maxHeight !== maxCardHeight) {
-          setMaxCardHeight(maxHeight)
-        }
-        
-        // Schedule another check after a short delay to catch any post-render changes
-        setTimeout(checkHeightsAgain, 300)
-      }, 50)
-    }
-    
-    // Double-check heights after initial calculation to handle any post-render adjustments
-    const checkHeightsAgain = () => {
-      const heights = cardsRef.current
-        .filter(Boolean)
-        .map(card => card?.scrollHeight || 0)
-      
-      const maxHeight = Math.max(...heights, 0)
-      if (maxHeight > 0 && maxHeight !== maxCardHeight) {
-        setMaxCardHeight(maxHeight)
+    const updateLayout = () => {
+      if (window.innerWidth >= 1024) {
+        setVisibleCount(3)
+      } else if (window.innerWidth >= 768) {
+        setVisibleCount(2)
+      } else {
+        setVisibleCount(1)
       }
     }
-
-    // Initial calculation
-    updateMaxHeight()
     
-    // Set up resize observer for more reliable resize detection
-    const resizeObserver = new ResizeObserver(() => {
-      updateMaxHeight()
-    })
-    
-    // Observe the container element
-    const container = document.getElementById('testimonials-container')
-    if (container) {
-      resizeObserver.observe(container)
-    }
-    
-    // Also listen to window resize as a fallback
-    window.addEventListener('resize', updateMaxHeight)
-    
-    return () => {
-      if (resizeTimeoutRef.current) {
-        clearTimeout(resizeTimeoutRef.current)
-      }
-      if (container) {
-        resizeObserver.unobserve(container)
-      }
-      resizeObserver.disconnect()
-      window.removeEventListener('resize', updateMaxHeight)
-    }
-  }, [testimonials.length]) // Remove maxCardHeight dependency to prevent infinite updates
-
-  const scrollToNextCard = () => {
-    const container = document.getElementById('testimonials-container')
-    const card = document.querySelector('.testimonial-card')
-    if (!container || !card) return
-
-    const cardWidth = card.clientWidth
-    container.scrollBy({
-      left: cardWidth + 48, // card width + gap
-      behavior: 'smooth'
-    })
-  }
-
-  const scrollToPrevCard = () => {
-    const container = document.getElementById('testimonials-container')
-    const card = document.querySelector('.testimonial-card')
-    if (!container || !card) return
-
-    const cardWidth = card.clientWidth
-    container.scrollBy({
-      left: -(cardWidth + 48), // card width + gap
-      behavior: 'smooth'
-    })
-  }
-
-  // Track scroll position to disable buttons appropriately
-  const [isAtStart, setIsAtStart] = useState(true)
-  const [isAtEnd, setIsAtEnd] = useState(false)
-
-  useEffect(() => {
-    const container = document.getElementById('testimonials-container')
-    if (!container) return
-
-    const handleScroll = () => {
-      setIsAtStart(container.scrollLeft <= 0)
-      setIsAtEnd(container.scrollLeft >= container.scrollWidth - container.clientWidth - 1)
-    }
-
-    container.addEventListener('scroll', handleScroll)
-    handleScroll() // Check initial state
-
-    return () => container.removeEventListener('scroll', handleScroll)
+    updateLayout()
+    window.addEventListener('resize', updateLayout)
+    return () => window.removeEventListener('resize', updateLayout)
   }, [])
-
+  
+  // Navigate to a specific slide
+  const goToSlide = (index: number) => {
+    const container = containerRef.current
+    if (!container) return
+    
+    // Calculate valid index range
+    const maxIndex = Math.max(0, testimonials.length - visibleCount)
+    const targetIndex = Math.min(Math.max(0, index), maxIndex)
+    
+    // Get all cards
+    const cards = container.querySelectorAll('.testimonial-card')
+    if (cards.length <= targetIndex) return
+    
+    // Get target card and scroll to it
+    const targetCard = cards[targetIndex] as HTMLElement
+    const scrollLeft = targetCard.offsetLeft - container.offsetLeft
+    
+    container.scrollTo({
+      left: scrollLeft,
+      behavior: 'smooth'
+    })
+    
+    setActiveIndex(targetIndex)
+  }
+  
+  // Handle scroll event
+  const handleScroll = () => {
+    const container = containerRef.current
+    if (!container) return
+    
+    const scrollPosition = container.scrollLeft
+    const cards = container.querySelectorAll('.testimonial-card')
+    
+    // Find the closest card to the current scroll position
+    let closestIndex = 0
+    let closestDistance = Infinity
+    
+    cards.forEach((card, index) => {
+      const cardElement = card as HTMLElement
+      const distance = Math.abs(cardElement.offsetLeft - container.offsetLeft - scrollPosition)
+      
+      if (distance < closestDistance) {
+        closestDistance = distance
+        closestIndex = index
+      }
+    })
+    
+    if (closestIndex !== activeIndex) {
+      setActiveIndex(closestIndex)
+    }
+  }
+  
+  useEffect(() => {
+    const container = containerRef.current
+    if (container) {
+      container.addEventListener('scroll', handleScroll)
+      return () => container.removeEventListener('scroll', handleScroll)
+    }
+  }, [activeIndex])
+  
+  // Next and previous buttons
+  const next = () => goToSlide(activeIndex + visibleCount)
+  const prev = () => goToSlide(activeIndex - visibleCount)
+  
+  // Calculate if we're at the start or end
+  const isAtStart = activeIndex === 0
+  const isAtEnd = activeIndex >= testimonials.length - visibleCount
+  
   return (
-    <div className="relative px-8">
-      {/* Previous Button */}
-      <button 
-        className="absolute -left-8 top-1/2 -translate-y-1/2 p-4 text-primary hover:text-primary/80 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-        onClick={scrollToPrevCard}
+    <div className="relative">
+      {/* Navigation Buttons */}
+      <button
+        className="absolute -left-4 sm:-left-8 top-1/2 -translate-y-1/2 p-3 text-primary hover:text-primary/80 transition-colors disabled:opacity-40 disabled:cursor-not-allowed z-10"
+        onClick={prev}
         disabled={isAtStart}
+        aria-label="Previous testimonials"
       >
         <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
         </svg>
       </button>
-
-      {/* Next Button */}
-      <button 
-        className="absolute -right-8 top-1/2 -translate-y-1/2 p-4 text-primary hover:text-primary/80 transition-colors disabled:opacity-30 disabled:cursor-not-allowed"
-        onClick={scrollToNextCard}
+      
+      <button
+        className="absolute -right-4 sm:-right-8 top-1/2 -translate-y-1/2 p-3 text-primary hover:text-primary/80 transition-colors disabled:opacity-40 disabled:cursor-not-allowed z-10"
+        onClick={next}
         disabled={isAtEnd}
+        aria-label="Next testimonials"
       >
         <svg className="w-6 h-6 sm:w-8 sm:h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
-
+      
+      {/* Carousel Container */}
       <div 
-        id="testimonials-container"
-        className="flex gap-12 overflow-x-auto snap-x snap-mandatory testimonials-scroll scroll-smooth pr-16"
+        ref={containerRef}
+        className="overflow-x-auto scrollbar-hide scroll-smooth snap-x snap-mandatory pb-12"
         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
       >
-        {testimonials.map((testimonial, index) => (
-          <div 
-            key={index} 
-            className="testimonial-card relative min-w-[calc(100%-2rem)] md:min-w-[calc(50%-2rem)] lg:min-w-[calc((100%/3)-2rem)] snap-center"
-            ref={el => { cardsRef.current[index] = el }}
-            style={{ height: maxCardHeight > 0 ? `${maxCardHeight}px` : 'auto' }}
-          >
-            <ShadowedCard>
-              <AnimatedSection
-                className="flex flex-col h-full"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.3 }}
-              >
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="h-12 w-12 rounded-full bg-primary/10 overflow-hidden flex-shrink-0">
-                    {testimonial.image ? (
-                      <div className="relative h-full w-full">
-                        <Image
-                          src={testimonial.image}
-                          alt={testimonial.name}
-                          fill
-                          className="object-cover"
-                          sizes="48px"
-                        />
-                      </div>
-                    ) : (
-                      <div className="flex items-center justify-center h-full">
-                        <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-                        </svg>
-                      </div>
-                    )}
+        <div className="flex">
+          {testimonials.map((testimonial, index) => (
+            <div 
+              key={index}
+              className={`testimonial-card flex-shrink-0 w-full md:w-1/2 lg:w-1/3 snap-start px-4 pb-6`}
+            >
+              <ShadowedCard>
+                <AnimatedSection
+                  className="flex flex-col h-full"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="h-12 w-12 rounded-full bg-primary/10 overflow-hidden flex-shrink-0">
+                      {testimonial.image ? (
+                        <div className="relative h-full w-full">
+                          <Image
+                            src={testimonial.image}
+                            alt={testimonial.name}
+                            fill
+                            className="object-cover"
+                            sizes="48px"
+                          />
+                        </div>
+                      ) : (
+                        <div className="flex items-center justify-center h-full">
+                          <svg className="h-6 w-6 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                          </svg>
+                        </div>
+                      )}
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900">{testimonial.name}</h3>
+                      <p className="text-sm text-gray-600 break-words hyphens-auto" lang="nl">{testimonial.role}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900">{testimonial.name}</h3>
-                    <p className="text-sm text-gray-600">{testimonial.role}</p>
-                  </div>
-                </div>
-                <blockquote className="text-gray-600 leading-relaxed">
-                  "{testimonial.quote}"
-                </blockquote>
-              </AnimatedSection>
-            </ShadowedCard>
-          </div>
-        ))}
+                  <blockquote className="text-gray-600 leading-relaxed break-words hyphens-auto" lang="nl">
+                    "{testimonial.quote}"
+                  </blockquote>
+                </AnimatedSection>
+              </ShadowedCard>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   )
