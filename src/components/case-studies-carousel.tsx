@@ -16,13 +16,13 @@ const caseStudies = [
   {
     title: 'Rijkswaterstaat',
     subtitle: 'Samenwerken in een complex ecosysteem',
-    description: 'Het IJ in Amsterdam kent veel verschillende stakeholders en gebruikers op en om het water. Rijkswaterstaat nam de lead om sammen met onder andere Waternet, havenbedrijf Amsterdam en Gemeente Amsterdam op een innovatieve manier samen te werken. Zo blijft het IJ leuk voor de recreant, veilig voor de beroepsvaarders en duurzaam voor de toekomst. "Door de begeleding van Stanley Innovation kunnen we met onze beperkte tijd toch heel effectief aan oplossingen werken".',
+    description: 'Het IJ in Amsterdam kent veel verschillende stakeholders en gebruikers op en om het water. Rijkswaterstaat nam de lead om samen met onder andere Waternet, havenbedrijf Amsterdam en Gemeente Amsterdam op een innovatieve manier samen te werken aan duurzame veiligheidsoplossingen voor beroepsmatig en recreatief scheepvaartverkeer op het IJ. "Door de begeleding van Stanley Innovation kunnen we met onze beperkte tijd toch heel effectief aan oplossingen werken".',
     image: '/images/rijkswaterstaat.png',
   },
   {
     title: 'Connected River',
     subtitle: 'Nudgen van vaargedrag',
-    description: 'Veel recreanten varen zonder vaarbewijs en kennen de betekenis van de borden niet goed. Als onderdeel van het Connected River programma ontwikkelen en testen we in korte iteraties meerdere oplossingen. "De app die we maakten leek in eerste instante een succes, maar de noodzaak om deze te downloaden ontbrak. Met roze borden met makkelijke boodschappen hebben we kunnen aantonen dat meer gebruikers de juiste route kiezen. Door de begeleiding van Stanley Innovation hebben we heel snel resultaten opgehaald en niet onnodig veel tijd gestopt in een app die niet nodig was".',
+    description: 'Veel recreanten varen zonder vaarbewijs en kennen de betekenis van de borden niet goed. Als onderdeel van het Connected River programma ontwikkelen en testen we in korte iteraties meerdere oplossingen. "De app die we maakten leek in eerste instante een succes, maar de noodzaak om deze te downloaden ontbrak. Met roze borden met aantrekkelijke boodschappen hebben we kunnen aantonen dat meer gebruikers de juiste route kiezen. Stanley liet ons inzien wat \'fail fast\' in de praktijk betekent en hielp ons stapgewijs een betere oplossing in de praktijk brengen".',
     image2: '/images/interreg.svg',
     image: '/images/connectedriver.png',
   },
