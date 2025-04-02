@@ -9,7 +9,7 @@ const caseStudies = [
   {
     title: 'Gemeente Dordrecht',
     subtitle: 'Monitoren klimaatadaptieve maatregelen',
-    description: 'De gemeente Dordrecht was op zoek naar een oplossing om klimaatadaptieve maatregelen te monitoren. In een halfjaar heb ik de gemeente begeleid bij het doorlopen van het Design Thinking proces. Het dashboard dat we ontwikkelden was zo\'n succes dat het ministerie dit nu landelijk uitrolt. "Het proces was een ongekend succes: naast een geweldige oplossing heeft het ook ons teams dichter bij eklaar gebracht".',
+    description: 'De gemeente Dordrecht was op zoek naar een oplossing om klimaatadaptieve maatregelen te monitoren. In een halfjaar heb ik de gemeente begeleid bij het doorlopen van het Design Thinking proces. Het dashboard dat we ontwikkelden was zo\'n succes dat het ministerie dit nu landelijk uitrolt. "Het proces was een ongekend succes: naast een geweldige oplossing heeft het ook ons teams dichter bij elkaar gebracht".',
     image: '/images/gemeentedordrecht.png',
     image2: '',
   },

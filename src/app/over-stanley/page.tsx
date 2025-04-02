@@ -42,7 +42,7 @@ const content = {
     {
       title: 'Wat innovatie voor mij betekent',
       paragraphs: [
-        'Innovatie gaat over mensen. Mijn grote doel is om zo veel mogelijk mensen te helpen. Dat kan op veel verschillende manieren, maar om echt te kunnen helpen moet je eerst goed begrijpen wat er nodis is. Dit vereist dat je luistert naar je gebruikers en jezelf durft uit te dagen vooroordelen opzij te zetten en buiten je eigen kaders te denken.',
+        'Innovatie gaat over mensen. Mijn grote doel is om zo veel mogelijk mensen te helpen. Dat kan op veel verschillende manieren, maar om echt te kunnen helpen moet je eerst goed begrijpen wat er nodig is. Dit vereist dat je luistert naar je gebruikers en jezelf durft uit te dagen vooroordelen opzij te zetten en buiten je eigen kaders te denken.',
         'We leven in een wereld waar keuzes veelal worden gemaakt op basis van winstmaximalisatie. Grote multinationals die onder het mom van innovatie op zoek zijn naar nog meer geld. Vaak genoeg gaat dit juist te koste van de mensen die het hardst hulp nodig hebben. ',
       ]
     },

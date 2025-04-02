@@ -1,6 +1,6 @@
 {
-  "/page": "app/page.js",
+  "/over-stanley/page": "app/over-stanley/page.js",
   "/innovatiebegeleiding/page": "app/innovatiebegeleiding/page.js",
   "/contact/page": "app/contact/page.js",
-  "/over-stanley/page": "app/over-stanley/page.js"
+  "/page": "app/page.js"
 }
