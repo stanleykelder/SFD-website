@@ -21,7 +21,7 @@ const testimonials = [
   {
     name: 'Benno Bultink',
     role: 'Innovatiemanager en projectmanager, Rijkswaterstaat en Connected River',
-    quote: 'Stanley heeft als innovatiecoach met zijn betrokken persoonlijkheid en kennis van innovatieprocessen een belangrijke bijdrage geleverd aan het experimenteam Amsterdam IJ. Stanley kan zowel in de dagelijkse werkzaamheden het team enthousiasmeren en scherp houden, als uitzoomen op projectniveau en adviseren op procesinrichting. Zijn pragmatisme zorgt ervoor dat innovatie niet alleen op post-its bestaat, maar daadwerkelijk in de praktijk wordt toegepast.',
+    quote: 'Stanley heeft als innovatiecoach met zijn betrokken persoonlijkheid en kennis van innovatieprocessen een belangrijke bijdrage geleverd aan het experimentteam Amsterdam IJ. Stanley kan zowel in de dagelijkse werkzaamheden het team enthousiasmeren en scherp houden, als uitzoomen op projectniveau en adviseren op procesinrichting. Zijn pragmatisme zorgt ervoor dat innovatie niet alleen op post-its bestaat, maar daadwerkelijk in de praktijk wordt toegepast.',
     image: '/images/benno-bultink.png'
   },
   {
