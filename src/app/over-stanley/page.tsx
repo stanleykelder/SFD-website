@@ -13,7 +13,7 @@ export const metadata: Metadata = generateMetadata({
   keywords: ['innovatiecoach', 'innovatie', 'Stanley', 'over Stanley', 'innovatie expert'],
   images: [
     {
-      url: '/images/stanley-presenteert.png',
+      url: '/images/stanley-presenteert.jpg',
       width: 800,
       height: 1067,
       alt: 'Stanley presenteert',
@@ -29,7 +29,7 @@ export const viewport = defaultViewport
 const content = {
   hero: {
     image: {
-      src: '/images/stanley-presenteert2.png',
+      src: '/images/stanley-presenteert.jpg',
       alt: 'Stanley',
       width: 600,
       height: 800,

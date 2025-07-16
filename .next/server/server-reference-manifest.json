@@ -1,14 +1,5 @@
 {
-  "node": {
-    "e52e3100e48a0aed20f2418ff763e9ecb12bb908": {
-      "workers": {
-        "app/contact/page": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fstanley%2FDocuments%2FSFD-website%2Fsrc%2Factions%2Fcontact.form.action.ts%22%2C%5B%22submitContactForm%22%5D%5D%5D&__client_imported__=true!"
-      },
-      "layer": {
-        "app/contact/page": "action-browser"
-      }
-    }
-  },
+  "node": {},
   "edge": {},
-  "encryptionKey": "0Uu82Y9rS1RnwYAUoG0z/KDyQq+uys/zxbI8KyQXaLM="
+  "encryptionKey": "/9ADD25SKWegc2xXOLUVz+SKWr3BmxVmLGb/ZOr1v6w="
 }
