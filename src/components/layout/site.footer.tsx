@@ -36,7 +36,7 @@ export function SiteFooter() {
           </div>
           <div className="flex flex-col items-center gap-2 md:items-end">
             <div className="text-sm text-primary-foreground/90 hover:text-primary-foreground">
-              <a href="mailto:stanley@savethecity.app" className="hover:underline">stanley@savethecity.app</a>
+              <a href="mailto:stanley@stanleyinnovation.nl" className="hover:underline">stanley@stanleyinnovation.nl</a>
             </div>
             <div className="text-sm text-primary-foreground/90 hover:text-primary-foreground">
               <a href="tel:+31620926980" className="hover:underline">+31 6 20 92 69 80</a>

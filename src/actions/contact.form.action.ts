@@ -35,7 +35,7 @@ export async function submitContactForm(prevState: ActionState, formData: FormDa
     // Create email content
     const emailData = {
       sender: { name: 'Stanley Innovation', email: 'info@savethecity.app' },
-      to: [{ email: 'stanley@savethecity.app', name: 'Stanley' }],
+      to: [{ email: 'stanley@stanleyinnovation.nl', name: 'Stanley' }],
       subject: `Nieuw contactformulier van ${name}`,
       htmlContent: `
         <h2>Nieuw contactformulier</h2>
