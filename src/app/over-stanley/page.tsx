@@ -35,7 +35,7 @@ const content = {
       height: 800,
     },
     title: 'Dit is Stanley',
-    introduction: 'Stanley is geboren en opgegroeid op Curacao, waar hij van jongs af aan genoot van alle verschillende culturele invloeden. Na de middelbare school verhuisde Stanley naar Nederland, waar hij in Amsterdam studeerde. Zijn passie voor andere culturen bracht hem tijdens zijn studie in Costa Rica, Madrid en Helsinki. Het omarmen van de diversiteit en het inleven en begrijpen van anderen heeft hij meegenomen naar zijn gebruikersgerichte aanpak van innovatie.'
+    introduction: 'Ik ben geboren en opgegroeid op Curacao, waar ik van jongs af aan genoot van alle verschillende culturele invloeden. Na de middelbare school verhuisde ik naar Nederland, waar ik in Amsterdam studeerde. Mijn passie voor andere culturen bracht me tijdens mijn studie in Costa Rica, Madrid en Helsinki. Het omarmen van de diversiteit en het inleven en begrijpen van anderen heb ik meegenomen naar mijn gebruikersgerichte aanpak van innovatie.'
   },
   
   sections: [
