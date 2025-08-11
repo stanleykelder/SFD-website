@@ -75,7 +75,7 @@ export async function submitContactForm(prevState: ActionState, formData: FormDa
     console.error('Error sending contact form:', error)
     return {
       success: false,
-      error: 'Er is iets misgegaan. Probeer het later opnieuw.'
+      error: 'Er is iets misgegaan. Je kunt me ook een mailtje sturen op stanley@stanleyinnovation.nl.'
     }
   }
 } 
