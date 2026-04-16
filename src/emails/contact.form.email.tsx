@@ -17,7 +17,21 @@ interface ContactFormEmailProps {
   message: string;
 }
 
+function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+}
+
 export function ContactFormEmail({ name, email, phone, message }: ContactFormEmailProps) {
+  const safeName = escapeHtml(name)
+  const safeEmail = escapeHtml(email)
+  const safePhone = phone ? escapeHtml(phone) : ''
+  const safeMessage = escapeHtml(message)
+
   const htmlContent = `
     <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
       <h1 style="color: #111827; font-size: 24px; font-weight: 600; margin-bottom: 24px;">
@@ -28,9 +42,9 @@ export function ContactFormEmail({ name, email, phone, message }: ContactFormEma
         <h2 style="color: #4B5563; font-size: 16px; font-weight: 600; margin-bottom: 8px;">
           Sender Details
         </h2>
-        <p style="color: #111827; margin: 0;">Name: ${name}</p>
-        <p style="color: #111827; margin: 0;">Email: ${email}</p>
-        ${phone ? `<p style="color: #111827; margin: 0;">Phone: ${phone}</p>` : ''}
+        <p style="color: #111827; margin: 0;">Name: ${safeName}</p>
+        <p style="color: #111827; margin: 0;">Email: ${safeEmail}</p>
+        ${safePhone ? `<p style="color: #111827; margin: 0;">Phone: ${safePhone}</p>` : ''}
       </div>
 
       <hr style="border: none; border-top: 1px solid #E5E7EB; margin: 24px 0;" />
@@ -39,7 +53,7 @@ export function ContactFormEmail({ name, email, phone, message }: ContactFormEma
         <h2 style="color: #4B5563; font-size: 16px; font-weight: 600; margin-bottom: 8px;">
           Message
         </h2>
-        <p style="color: #111827; white-space: pre-wrap;">${message}</p>
+        <p style="color: #111827; white-space: pre-wrap;">${safeMessage}</p>
       </div>
     </div>
   `;

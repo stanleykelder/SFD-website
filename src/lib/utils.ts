@@ -34,6 +34,18 @@ export function isValidEmail(email: string): boolean {
 }
 
 /**
+ * Escapes HTML special characters to prevent XSS/injection
+ */
+export function escapeHtml(str: string): string {
+  return str
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;')
+}
+
+/**
  * Converts a string to a URL-friendly slug
  */
 export function slugify(str: string): string {

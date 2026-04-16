@@ -1,5 +1,13 @@
 {
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/contact/page": "app/contact/page.js",
   "/innovatiebegeleiding/page": "app/innovatiebegeleiding/page.js",
   "/over-stanley/page": "app/over-stanley/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/trainingen/agile-scrum/page": "app/trainingen/agile-scrum/page.js",
+  "/trainingen/design-thinking/page": "app/trainingen/design-thinking/page.js",
+  "/trainingen/op-maat/page": "app/trainingen/op-maat/page.js",
+  "/trainingen/page": "app/trainingen/page.js",
+  "/workshops/page": "app/workshops/page.js"
 }
